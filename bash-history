@@ -1,5 +1,13 @@
+##LIST DOCKER IMAGES      
        sudo docker run -i -t debian
+       
+## RUN 'debian' IMAGE
+       sudo docker run -i -t debian
+       
+## SAVE 'debian' IMAGE to 'debian-voip' -> (9800d3701775) instance number when docker is exited
        sudo docker commit 9800d3701775 debian-voip
+ 
+ ## RUN 'debian-voip' IMAGE
        sudo docker run -i -t debian-voip
        sudo docker run -i -t -p 5060:5060 debian-voip
 
