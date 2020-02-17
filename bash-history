@@ -1,3 +1,14 @@
+#INSTALL DOCKER UBUNTU
+       sudo apt install apt-transport-https ca-certificates curl software-properties-common
+       curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+       sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+       sudo apt-get update
+       apt-cache policy docker-ce
+       sudo apt-get install docker-ce
+       sudo apt-get install docker-ce-cli containerd.io
+       sudo systemctl status docker
+#--------------------------------
+
 #IMAGES MANIPULATION
 
 ##PULL MINIMAL DOCKER IMAGES      
@@ -15,6 +26,8 @@
 ## RUN 'debian-voip' IMAGE
        sudo docker run -i -t debian-voip
        sudo docker run -i -t -p 5060:5060 debian-voip
+
+#--------------------------------
 
 # NETWORK MANIPULATION
 
