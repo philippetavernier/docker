@@ -32,46 +32,10 @@
 # NETWORK MANIPULATION
 
 ## LIST DOCKER NETWORK DRIVER
-  671  sudo docker network ls
-  669  sudo docker network inspect bridge
+       sudo docker network ls
+       sudo docker network inspect bridge
+       sudo  docker network rm mynetwork
+       sudo  docker network create --driver=macvlan --subnet=192.168.15.0/24 --gateway=192.168.15.1 -o parent=enp2s0 mynetwork
+       sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
+       sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
 
-
-  672  sudo docker images
-  673  sudo  docker network create --driver=bridge --subnet=192.168.0.0/16 br0
-  674  sudo docker ls
-  675  sudo docker network ls
-  676  sudo docker network inspect bridge
-  677  sudo docker network ls
-  678  sudo  docker network create --driver=bridge --subnet=192.168.0.0/16 mynetwork
-  679  sudo  docker network rm br0
-  680  sudo  docker network create --driver=bridge --subnet=192.168.0.0/16 mynetwork
-  681  sudo docker network ls
-  682  sudo docker run -i -t -p 5060:5060 -network mynetwork debian-voip
-  683  sudo docker run -i -t -p 5060:5060 --network mynetwork debian-voip
-  684  sudo docker network ls
-  685  sudo  docker network rm mynetwork
-  686  docker network create     -o "com.docker.network.bridge.host_binding_ipv4"="172.19.0.1"     simple-network
-  687  docker network create     -o "com.docker.network.bridge.host_binding_ipv4"="192.168.15.54"     simple-network
-  688  sudo docker network create     -o "com.docker.network.bridge.host_binding_ipv4"="192.168.15.54"     simple-network
-  689  sudo docker network ls
-  690  sudo docker run -i -t -p 5060:5060 --network simplenetwork debian-voip
-  691  sudo docker run -i -t -p 5060:5060 --network simple-network debian-voip
-  692  sudo docker network ls
-  693  sudo  docker network rm simple-network
-  694  sudo docker network ls
-  695  sudo  docker network create --driver=bridge --subnet=192.168.15.0/24 mynetwork
-  696  sudo docker network ls
-  697  sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
-  698  sudo  docker network rm mynetwork
-  699  sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
-  700  clear
-  701  sudo  docker network create --driver=bridge --subnet=192.168.15.0/24 mynetwork
-  702  sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
-  703  sudo docker network ls
-  704  history
-  705  sudo  docker network rm mynetwork
-  706  sudo  docker network create --driver=macvlan --subnet=192.168.15.0/24 --gateway=192.168.15.1 -o parent=enp2s0 mynetwork
-  707  sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
-  708  sudo  docker network ls
-  709  sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
-  710  history
