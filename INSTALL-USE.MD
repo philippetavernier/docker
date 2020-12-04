@@ -1,4 +1,4 @@
-#INSTALL DOCKER UBUNTU
+# INSTALL DOCKER UBUNTU
        sudo apt install apt-transport-https ca-certificates curl software-properties-common
        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
        sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
@@ -9,12 +9,12 @@
        sudo systemctl status docker
 #--------------------------------
 
-#IMAGES MANIPULATION
+# IMAGES MANIPULATION
 
-##PULL MINIMAL DOCKER IMAGES      
+## PULL MINIMAL DOCKER IMAGES      
        sudo docker pull debian
 
-##LIST DOCKER IMAGES      
+## LIST DOCKER IMAGES      
        sudo docker images
        
 ## RUN 'debian' IMAGE
