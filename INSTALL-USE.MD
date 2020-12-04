@@ -11,31 +11,31 @@
 
 # IMAGES MANIPULATION
 
-#PULL MINIMAL DOCKER IMAGES      
-       sudo docker pull debian
+       #PULL MINIMAL DOCKER IMAGES      
+              sudo docker pull debian
 
-#LIST DOCKER IMAGES      
-       sudo docker images
+       #LIST DOCKER IMAGES      
+              sudo docker images
        
-#RUN 'debian' IMAGE
-       sudo docker run -i -t debian
+       #RUN 'debian' IMAGE
+              sudo docker run -i -t debian
        
-#SAVE 'debian' IMAGE to 'debian-voip' -> (9800d3701775) instance number when docker is exited
-       sudo docker commit 9800d3701775 debian-voip
+       #SAVE 'debian' IMAGE to 'debian-voip' -> (9800d3701775) instance number when docker is exited
+              sudo docker commit 9800d3701775 debian-voip
  
-#RUN 'debian-voip' IMAGE
-       sudo docker run -i -t debian-voip
-       sudo docker run -i -t -p 5060:5060 debian-voip
+       #RUN 'debian-voip' IMAGE
+              sudo docker run -i -t debian-voip
+              sudo docker run -i -t -p 5060:5060 debian-voip
 
 #--------------------------------
 
 # NETWORK MANIPULATION
 
-##LIST DOCKER NETWORK DRIVER
-       sudo docker network ls
-       sudo docker network inspect bridge
-       sudo  docker network rm mynetwork
-       sudo  docker network create --driver=macvlan --subnet=192.168.15.0/24 --gateway=192.168.15.1 -o parent=enp2s0 mynetwork
-       sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
-       sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
+       ##LIST DOCKER NETWORK DRIVER
+              sudo docker network ls
+              sudo docker network inspect bridge
+              sudo  docker network rm mynetwork
+              sudo  docker network create --driver=macvlan --subnet=192.168.15.0/24 --gateway=192.168.15.1 -o parent=enp2s0 mynetwork
+              sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
+              sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
 
