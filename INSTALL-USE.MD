@@ -20,6 +20,9 @@
        #LIST DOCKER IMAGES RUNING
               sudo docker ps -aq
        
+       #STOP DOCKER CONTAINER IMAGES RUNING
+              sudo docker rm go-graphite
+       
        #RUN 'debian' IMAGE
               sudo docker run -i -t debian
        
