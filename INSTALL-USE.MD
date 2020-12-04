@@ -11,19 +11,19 @@
 
 # IMAGES MANIPULATION
 
-## PULL MINIMAL DOCKER IMAGES      
+#PULL MINIMAL DOCKER IMAGES      
        sudo docker pull debian
 
-## LIST DOCKER IMAGES      
+#LIST DOCKER IMAGES      
        sudo docker images
        
-## RUN 'debian' IMAGE
+#RUN 'debian' IMAGE
        sudo docker run -i -t debian
        
-## SAVE 'debian' IMAGE to 'debian-voip' -> (9800d3701775) instance number when docker is exited
+#SAVE 'debian' IMAGE to 'debian-voip' -> (9800d3701775) instance number when docker is exited
        sudo docker commit 9800d3701775 debian-voip
  
-## RUN 'debian-voip' IMAGE
+#RUN 'debian-voip' IMAGE
        sudo docker run -i -t debian-voip
        sudo docker run -i -t -p 5060:5060 debian-voip
 
@@ -31,7 +31,7 @@
 
 # NETWORK MANIPULATION
 
-## LIST DOCKER NETWORK DRIVER
+##LIST DOCKER NETWORK DRIVER
        sudo docker network ls
        sudo docker network inspect bridge
        sudo  docker network rm mynetwork
