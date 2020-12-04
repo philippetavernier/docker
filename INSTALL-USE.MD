@@ -16,6 +16,9 @@
 
        #LIST DOCKER IMAGES      
               sudo docker images
+              
+       #LIST DOCKER IMAGES RUNING
+              sudo docker ps -aq
        
        #RUN 'debian' IMAGE
               sudo docker run -i -t debian
@@ -26,6 +29,9 @@
        #RUN 'debian-voip' IMAGE
               sudo docker run -i -t debian-voip
               sudo docker run -i -t -p 5060:5060 debian-voip
+
+
+       
 
 #--------------------------------
 
