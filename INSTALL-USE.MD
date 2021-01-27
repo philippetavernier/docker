@@ -25,6 +25,9 @@
        
        #RUN 'debian' IMAGE
               sudo docker run -i -t debian
+              
+       #CONNECT to a docker container runnig in demon mode
+              docker exec -it container container-name bash
        
        #SAVE 'debian' IMAGE to 'debian-voip' -> (9800d3701775) instance number when docker is exited
               sudo docker commit 9800d3701775 debian-voip
