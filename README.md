@@ -54,3 +54,4 @@ install and use
               sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
               sudo docker run -i -t -p 5060:5060 --network mynetwork --ip 192.168.15.22 debian-voip
 
+https://hackmd.io/@YSaVczpYQySlUnehD8yxvw/r1jk4NkBO
