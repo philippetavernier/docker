@@ -22,6 +22,7 @@ install and use
               
        #LIST DOCKER IMAGES RUNING
               sudo docker ps -aq
+              sudo docker ps
        
        #STOP DOCKER CONTAINER IMAGES RUNING
               sudo docker rm go-graphite
@@ -31,6 +32,9 @@ install and use
               
        #CONNECT to a docker container runnig in demon mode
               docker exec -it container container-name bash
+              
+       #CONNECT to a docker container runnig in demon mode as ROOT
+              docker exec -u 0 -it mycontainer bash
        
        #SAVE 'debian' IMAGE to 'debian-voip' -> (9800d3701775) instance number when docker is exited
               sudo docker commit 9800d3701775 debian-voip
