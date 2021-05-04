@@ -21,8 +21,8 @@ install and use
               sudo docker images
               
        #LIST DOCKER IMAGES RUNING
-              sudo docker ps -aq
               sudo docker ps
+              sudo docker ps -aq
        
        #STOP DOCKER CONTAINER IMAGES RUNING
               sudo docker rm go-graphite
