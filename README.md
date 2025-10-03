@@ -1,8 +1,8 @@
 # docker
 install and use
 
-Check ubuntu version
-cat /etc/*ease
+## Check ubuntu version
+       cat /etc/*ease
 
 # INSTALL DOCKER UBUNTU
        sudo apt install apt-transport-https ca-certificates curl software-properties-common
